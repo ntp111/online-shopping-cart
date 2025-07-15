@@ -90,11 +90,25 @@ create .env file with database credentials.
 
 add the .env file under "back-end" folder.
 
-### 3. Install Dependencies and Run the Server
 
+### 3. Set Up Front-end
+Open new Terminal
+```bash
+cd online-shopping-cart
+cd front-end
+npm install
+npm run build
+```
+
+### 4. Set Up Back-end
+1. copy "dist" folder under "front-end" folder
+2. past "dist" folder under "back-end" folder
+3. Go back to Backend terminal and run the following
 ```bash
 npm install
 npm start
 ```
+
+4. open "http://localhost:3000" to start testing locally 
 
 

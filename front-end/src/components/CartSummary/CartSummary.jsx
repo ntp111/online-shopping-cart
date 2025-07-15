@@ -13,33 +13,7 @@ function CartSummary({ products }) {
     // const [discountCode, setDiscountCode] = useState("");
     // const [discount, setDiscount] = useState(null);
     const [errorMessage, setErrorMessage] = useState("");
-    // const [discountAmount, setDiscountAmount] = useState(0);
 
-    // const handleApplyDiscount = () => {
-    //     api.get(`/discount?code=${encodeURIComponent(discountCode)}`)
-    //         .then((res) => {
-    //             const data = res.data;
-
-    //             if (data.success) {
-    //                 setDiscount({
-    //                     code:discountCode,
-    //                     type: data.type,
-    //                     value: data.value,
-    //                 });
-    //                 setErrorMessage("");
-
-
-    //             } else {
-    //                 setDiscount(null);
-    //                 setErrorMessage(data.message || "Invalid discount code.");
-    //             }
-    //         })
-    //         .catch((err) => {
-    //             console.error(err);
-    //             setDiscount(null);
-    //             setErrorMessage("Something went wrong. Please try again.");
-    //         });
-    // };
 
 
 
@@ -198,6 +172,10 @@ function CartSummary({ products }) {
                         {discountError && (
                             <p className="discount-error">{discountError}</p>
                         )}
+                        {errorMessage && (
+                            <p className="discount-error">{errorMessage}</p>
+                        )}
+                        
                     </div>
 
 
