@@ -1,86 +1,97 @@
-# Shopping Cart
+# 🛒 Shopping Cart Challenge
 
-Build a mini food ordering web app featuring product listing and a functional shopping cart.\
-Prioritize correctness in functionality while getting it to look as close to the design as possible.
+This project is an online shopping cart system. It allows users to browse products, add items to a shopping cart, apply discount codes, and complete orders. 
 
-For this task you will need to integrate to our demo e-commerce API for listing products and placing orders.
+Additionally, the application also tracks customer sessions and stores order history for a day.
 
-**API Reference**
+---
 
-You can find our [API Documentation](https://orderfoodonline.deno.dev/public/openapi.html) here.
+## Tech Stack
 
-API documentation is based on [OpenAPI3.1](https://swagger.io/specification/v3/) specification.
-You can also find spec file [here](https://orderfoodonline.deno.dev/public/openapi.yaml).
- 
-**Functional Requirements**
+- **Frontend:** React
+- **Backend:** Node.js (Express)
+- **Database:** PostgreSQL
+- **Deployment:** Azure App Service
 
-- Display products with images
-- Add items to the cart and remove items
-- Show order total correctly
-- Increase or decrease item count in the cart
-- Show order confirmation after placing the order
-- Interactive hover and focus states for elements
+---
 
-**Bonus Goals**
+## Features
 
-- Allow users to enter a discount code (above the "Confirm Order" button)
-- Discount code `HAPPYHOURS` applies 18% discount to the order total
-- Discount code `BUYGETONE` gives the lowest priced item for free
-- Responsive design based on device's screen size
+- **Browse Products**
+  - Products displayed with images and details.
 
-**Are You a Full Stack Developer??**
+- **Shopping Cart**
+  - Add items to cart.
+  - Remove items from cart.
+  - Adjust item quantities.
+  - Live order total calculation.
 
-Impress us by implementing your own version of the API based on the OpenAPI specification.\
-Choose any language or framework of your choice. For example our top pick for backend is [Go](https://go.dev)
+- **Order Confirmation**
+  - Confirmation displayed after successful order placement.
 
-> The API immplementation example available to you at orderfoodonline.deno.dev/api is simplified and doesn't handle some edge cases intentionally.
-> Use your best judgement to build a Robust API server.
+- **Customer Order History**
+  - A **customer ID** is randomly generated when a user first adds an item to their cart.
+  - This ID is stored in the localStorage for a day and used to:
+    - Save multiple orders placed by the same customer.
+    - Retrieve past orders for display.
+  - Access Order History through "Your Orders" on Navbar
 
-## Design
+- **Discount Codes**
+  - Enter `HAPPYHOURS` for an 18% discount.
+  - Enter `BUYGETONE` to get the lowest-priced item for free.
 
-You can find a [Figma](https://figma.com) design file `design.fig` that you can use.
-You might have to use your best judgement for some mobile layout designs and spacing.
+- **Responsive Design**
+  - Optimized for desktop, tablet, and mobile screens.
 
-### Style Guide
+- **Interactive UI**
+  - Hover and focus effects on buttons and inputs for better user experience.
+  - "Move to Cart" button for mobile screen.
 
-The designs were created to the following widths:
+---
 
-- Mobile: 375px
-- Desktop: 1440px
+## Database Design
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+The application uses **PostgreSQL** with the following schema:
 
-**Typography**
+#### 1. Products
+#### 2. Orders
+#### 3. Order_Items
+#### 4.Discounts
 
-- Font size (product names): 16px
+---
 
-### Font
+## How to Test Locally
 
-- Family: [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)
-- Weights: 400, 600, 700
+### Prerequisites
 
-## Getting Started
+- Node.js (v18+ recommended)
+- npm
+- PostgreSQL (Connection to an Azure PostgreSQL instance)
 
-Feel free to use any tool or workflow ou are comformtable with.\
-Here is an example workflow (you can use it as a reference or use your own workflow)
+---
 
-1. Create a new public repository on [GitHub](https://github.com) (alternatively you can use GitLab, BitBucket or Git server of your choice).
-   If you are creating your repository on GitHub, you can chose to use this repository as a starting template. (Click on Use template button at the top)
-2. Look through the deisngs to plan your project. This will help you design UI libraries or tools.
-3. Create a [Vite](https://vite.dev) app to bootstrap a modern front-end project (alternatively use the framework of your choice).
-4. Structure your HTML and preview before theming and adding interactive functionality.
-5. Test and Iterate to build more features
-6. Deploy your app anywhere securely. You may use AWS, Vercel, Deno Deploy, Surge, CloudFlare Pages or some other web app deployment services.
-7. Additionally configure your repository to automatically publish your app on new commit push (CI).
+### 1. Clone the Repository
 
-> 💡 Replace or Modify this README to explain your solution and how to run and test it.
+```bash
+git clone https://github.com/ntp111/online-shopping-cart.git
+cd online-shopping-cart
+cd back-end
+```
 
-_By following these guidelines, you should be able to build a functional and visually appealing mini e-commerce shopping portal that meets the minimum requirements and bonus goals. Good luck! 🚀_
+### 2. Set Up Environment Variables
+create .env file with database credentials. 
+(credentials cannot be committed so please check from db_credential.jpg image to generate the .env file)
 
-**Resources**
+### 3. Install Dependencies and Run the Server
 
-- API documentation: https://orderfoodonline.deno.dev/public/openapi.html
-- API specification: https://orderfoodonline.deno.dev/public/openapi.yaml
-- Figma design file: [design.fig](./design.fig)
-- Red Hat Text font: https://fonts.google.com/specimen/Red+Hat+Text
+```bash
+npm install
+npm start
+```
+
+### Deployed App
+You can test the deployed version here:
+
+https://onlineshoppingcart-hecrfkfsh0cgdph8.australiaeast-01.azurewebsites.net/
+
 
