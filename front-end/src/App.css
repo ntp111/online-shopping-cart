@@ -1,0 +1,32 @@
+#root {
+    width: 100%;
+    background-color: rgb(252 248 245);
+    color: #6e6461;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 600;
+    font-size: 14px;;
+}
+
+@media (max-width: 540px) {
+    #root {
+        text-align: center;
+    }
+}
+
+
+.text-color-1{
+    color: rgb(197 107 79);
+}
+
+.text-color-2{
+    color: #C08778;
+}
+
+.text-color-3{
+    color: rgb(207 200 198)
+}
+
+.text-color-4{
+    color: rgb(63 45 40);
+}
+

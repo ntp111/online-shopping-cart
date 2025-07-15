@@ -1,0 +1,34 @@
+.fixed-cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background:white;
+  color: rgb(175 68 36);
+  border:2px solid rgb(175 68 36);
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  width: 50px;
+}
+
+.fixed-cart-button:hover {
+  background: rgb(175 68 36);
+    color: white;
+}
+.fixed-cart-button:hover i {
+  color: white;
+}
+
+.fixed-cart-button i {
+  color:rgb(175 68 36);
+  margin-left:-6px;
+}
+
+@media (min-width: 769px) {
+  .fixed-cart-button {
+    display: none;
+  }
+}

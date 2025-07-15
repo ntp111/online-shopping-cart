@@ -1,0 +1,189 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 480px;
+    max-height: 80vh;
+    width: 90%;
+    overflow-y: auto;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: rgb(175 68 36);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+}
+
+.popup button:hover  {
+
+  background-color: rgb(150, 50, 20);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgb(150, 50, 20);
+}
+
+.popup img {
+    width: 40px;
+    margin-bottom: -20px;
+}
+
+.popup h1 {
+    font-weight: 600;
+}
+
+.popup-msg {
+    font-weight: 400;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.order-details{
+    background-color: rgb(252 248 245);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;;
+}
+
+.order{
+    margin-top: 0px;
+}
+.flex-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.flex-item-start {
+    justify-content: start;
+}
+
+.flex-item-space-between {
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.left-group {
+    display: flex;
+}
+
+.item-info {
+    margin: 10px;
+    margin-top:0px;
+    width: 100%;
+}
+
+.item-name{
+    width:75%;
+    margin-bottom:20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-info {
+    width: 100%;
+}
+
+.item-img-container {
+    width: 91px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.item-img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.item-price {
+    font-size: 16px;
+}
+
+
+.start-new-container{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1024px) {
+    .popup {
+        width: 400px;
+    }
+}
+
+@media (max-width: 750px) {
+    .popup {
+        width: 340px;
+    }
+    .popup img{
+        width: 30px;
+    }
+    .popup h1{
+        font-size: 33px;
+    }
+    .right-group{
+        margin-top: 0px! important;
+    }
+    .item-img-container{
+        width: 70px;
+    }
+    .item-img-container img{
+        width: 70px;
+    }
+    .flex-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .popup {
+        width: 310px;
+        padding:20px;
+    }
+    .popup img{
+        width: 25px;
+    }
+    .popup h1{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .right-group{
+        margin-top: 0px! important;
+    }
+    .left-group{
+        width: 90px;
+        height: 65px;
+    }
+    .item-img-container img{
+        width: 70px;
+    }
+    .order-details{
+        padding:10px;
+    }
+
+}
+
