@@ -15,6 +15,13 @@ Additionally, the application also tracks customer sessions and stores order his
 
 ---
 
+## Deployed App
+Access deployed version from here:
+
+https://onlineshoppingcart-hecrfkfsh0cgdph8.australiaeast-01.azurewebsites.net/
+
+---
+
 ## Features
 
 - **Browse Products**
@@ -33,8 +40,7 @@ Additionally, the application also tracks customer sessions and stores order his
   - A **customer ID** is randomly generated when a user first adds an item to their cart.
   - This ID is stored in the localStorage for a day and used to:
     - Save multiple orders placed by the same customer.
-    - Retrieve past orders for display.
-  - Access Order History through "Your Orders" on Navbar
+    - Retrieve past orders for display (access through "Your Orders" on navbar).
 
 - **Discount Codes**
   - Enter `HAPPYHOURS` for an 18% discount.
@@ -56,7 +62,7 @@ The application uses **PostgreSQL** with the following schema:
 #### 1. Products
 #### 2. Orders
 #### 3. Order_Items
-#### 4.Discounts
+#### 4. Discounts
 
 ---
 
@@ -64,7 +70,7 @@ The application uses **PostgreSQL** with the following schema:
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
+- Node.js (v22)
 - npm
 - PostgreSQL (Connection to an Azure PostgreSQL instance)
 
@@ -80,7 +86,9 @@ cd back-end
 
 ### 2. Set Up Environment Variables
 create .env file with database credentials. 
-(credentials cannot be committed so please check from db_credential.jpg image to generate the .env file)
+(credentials cannot be committed so please check from db_credentials.png image to generate the .env file)
+
+add the .env file under "back-end" folder.
 
 ### 3. Install Dependencies and Run the Server
 
@@ -88,10 +96,5 @@ create .env file with database credentials.
 npm install
 npm start
 ```
-
-### Deployed App
-You can test the deployed version here:
-
-https://onlineshoppingcart-hecrfkfsh0cgdph8.australiaeast-01.azurewebsites.net/
 
 
