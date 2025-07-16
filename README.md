@@ -86,7 +86,10 @@ cd back-end
 
 ### 2. Set Up Environment Variables
 create .env file with database credentials. 
-(credentials cannot be committed so please check from db_credentials.png image to generate the .env file)
+(credentials cannot be committed so information will be shared later)
+
+.env file content:
+POSTGRESQLCONNSTR_DATABASE_URL=postgresql://<username>:<password>@<server>:<port>/food_ordering?sslmode=require
 
 add the .env file under "back-end" folder.
 
@@ -109,6 +112,6 @@ npm install
 npm start
 ```
 
-4. open "http://localhost:3000" to start testing locally 
+4. open "http://localhost:3000" to start testing locally
 
 
