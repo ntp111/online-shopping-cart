@@ -105,7 +105,7 @@ npm run build
 
 ### 4. Set Up Back-end
 1. copy "dist" folder under "front-end" folder
-2. past "dist" folder under "back-end" folder
+2. paste "dist" folder under "back-end" folder
 3. Go back to Backend terminal and run the following
 ```bash
 npm install
